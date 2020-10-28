@@ -67,8 +67,18 @@ public class BeansConfig {
 			igniteConfiguration.setGridLogger(new Slf4jLogger());
 			igniteConfiguration.setWorkDirectory("/var/tmp/ignite/work");
 
-			// igniteConfiguration.setPublicThreadPoolSize(16);
-			// igniteConfiguration.setSystemThreadPoolSize(16);
+			igniteConfiguration.setBuildIndexThreadPoolSize(2);
+			igniteConfiguration.setDataStreamerThreadPoolSize(2);
+			igniteConfiguration.setManagementThreadPoolSize(2);
+			igniteConfiguration.setMvccVacuumThreadCount(2);
+			igniteConfiguration.setPeerClassLoadingThreadPoolSize(2);
+			igniteConfiguration.setPublicThreadPoolSize(4);
+			igniteConfiguration.setQueryThreadPoolSize(2);
+			igniteConfiguration.setRebalanceThreadPoolSize(2);
+			igniteConfiguration.setServiceThreadPoolSize(2);
+			igniteConfiguration.setStripedPoolSize(2);
+			igniteConfiguration.setSystemThreadPoolSize(4);
+			igniteConfiguration.setUtilityCachePoolSize(2);
 
 			ignite = Ignition.getOrStart(igniteConfiguration);
 
