@@ -79,6 +79,9 @@ public class BeansConfig {
 			igniteConfiguration.setStripedPoolSize(2);
 			igniteConfiguration.setSystemThreadPoolSize(4);
 			igniteConfiguration.setUtilityCachePoolSize(2);
+			igniteConfiguration.getClientConnectorConfiguration().setThreadPoolSize(2);
+			igniteConfiguration.getConnectorConfiguration().setThreadPoolSize(2);
+			// igniteConfiguration.setConnectorConfiguration(null);
 
 			ignite = Ignition.getOrStart(igniteConfiguration);
 
@@ -95,7 +98,10 @@ public class BeansConfig {
 			log.debug("getStripedPoolSize: " + ignite.configuration().getStripedPoolSize());
 			log.debug("getSystemThreadPoolSize: " + ignite.configuration().getSystemThreadPoolSize());
 			log.debug("getUtilityCacheThreadPoolSize: " + ignite.configuration().getUtilityCacheThreadPoolSize());
-
+			log.debug("getClientConnectorConfiguration: "
+					+ igniteConfiguration.getClientConnectorConfiguration().getThreadPoolSize());
+//			log.debug("getConnectorConfiguration: "
+//					+ igniteConfiguration.getConnectorConfiguration().getThreadPoolSize());
 		} catch (IgniteException e) {
 			log.error(e.getMessage(), e);
 		}
