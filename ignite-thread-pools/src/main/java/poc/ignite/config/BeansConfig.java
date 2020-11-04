@@ -80,7 +80,7 @@ public class BeansConfig {
 			igniteConfiguration.setSystemThreadPoolSize(4);
 			igniteConfiguration.setUtilityCachePoolSize(2);
 			igniteConfiguration.getClientConnectorConfiguration().setThreadPoolSize(2);
-			igniteConfiguration.getConnectorConfiguration().setThreadPoolSize(2);
+			// igniteConfiguration.getConnectorConfiguration().setThreadPoolSize(2);
 			// igniteConfiguration.setConnectorConfiguration(null);
 
 			ignite = Ignition.getOrStart(igniteConfiguration);
