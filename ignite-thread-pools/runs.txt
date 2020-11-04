@@ -19,3 +19,12 @@ MiB Mem :   6255.4 total,   5736.2 free,    417.4 used,    101.8 buff/cache
 MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   5664.4 avail Mem
 
 ----------=----------
+
+RUN 3: With ignite-rest-http & igniteConfiguration.getConnectorConfiguration().setThreadPoolSize(2);
+
+ashish@LAPTOP-0CGC34A5:~$ top -H -p 1641
+top - 20:45:00 up 19:13,  0 users,  load average: 0.48, 0.25, 0.18
+Threads:  84 total,   1 running,  83 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.2 us,  0.0 sy,  0.0 ni, 99.5 id,  0.2 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   6255.4 total,   5739.8 free,    413.8 used,    101.8 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   5668.1 avail Mem
