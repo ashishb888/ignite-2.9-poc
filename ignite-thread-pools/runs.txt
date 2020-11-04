@@ -8,3 +8,14 @@ MiB Mem :   6255.4 total,   5726.5 free,    427.3 used,    101.6 buff/cache
 MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   5654.7 avail Mem
 
 ----------=----------
+
+RUN 2: With ignite-rest-http
+
+ashish@LAPTOP-0CGC34A5:~$ top -H -p 1545
+top - 20:43:32 up 19:12,  0 users,  load average: 0.24, 0.17, 0.15
+Threads:  85 total,   0 running,  85 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.1 us,  0.0 sy,  0.0 ni, 99.9 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   6255.4 total,   5736.2 free,    417.4 used,    101.8 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   5664.4 avail Mem
+
+----------=----------
