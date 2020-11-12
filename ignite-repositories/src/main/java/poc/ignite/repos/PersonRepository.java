@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import poc.ignite.domain.Person;
 
-@RepositoryConfig(cacheName = "person-cache")
+@RepositoryConfig(cacheName = "Person")
 @Repository
 public interface PersonRepository extends IgniteRepository<Person, Integer> {
 
