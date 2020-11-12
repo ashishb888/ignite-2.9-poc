@@ -99,9 +99,11 @@ public class BeansConfig {
 			log.debug("getSystemThreadPoolSize: " + ignite.configuration().getSystemThreadPoolSize());
 			log.debug("getUtilityCacheThreadPoolSize: " + ignite.configuration().getUtilityCacheThreadPoolSize());
 			log.debug("getClientConnectorConfiguration: "
-					+ igniteConfiguration.getClientConnectorConfiguration().getThreadPoolSize());
-//			log.debug("getConnectorConfiguration: "
-//					+ igniteConfiguration.getConnectorConfiguration().getThreadPoolSize());
+					+ ignite.configuration().getClientConnectorConfiguration().getThreadPoolSize());
+
+			log.debug("getMarshaller: " + ignite.configuration().getMarshaller().toString());
+			log.debug("getConnectorConfiguration: "
+					+ ignite.configuration().getConnectorConfiguration().getThreadPoolSize());
 		} catch (IgniteException e) {
 			log.error(e.getMessage(), e);
 		}
