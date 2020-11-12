@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: ignite-repositories-rest-client
+    
+  autoconfigure:
+    exclude:
+    - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+    - org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration
+
+server:  port: 8090
+
+logging:  file:    name: /var/tmp/logs/${spring.application.name}/${spring.application.name}
+  level:    root: info
+    poc.ignite: debug
